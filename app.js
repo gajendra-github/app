@@ -10,5 +10,7 @@ app.get("/", (req, res) => {
     })
 })
 
-app.listen(process.env.PORT || 9696);
+const PORT = process.env.PORT || 9696;
+
+app.listen(PORT, () => console.log(` Server is listening to port ${PORT}`));
 
