@@ -14,7 +14,7 @@ adminRouter.route('/').get((req, res) => {
     (async function mongo() {
         let client;
         try {
-            client = await MongoClient.connect(url);
+            client = await MongoClient.connect(uri);
             console.log('Connected to mongo DB');
 
             const db = client.db(dbName);
