@@ -29,3 +29,10 @@ adminRouter.route('/').get((req, res) => {
 
 module.exports = adminRouter;
 
+/*
+dbUser
+
+
+
+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
+*/
