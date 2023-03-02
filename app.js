@@ -1,6 +1,10 @@
 const express = require('express');
 const app = express();
 require("dotenv").config();
+const adminRouter = require('./routers/adminRouter');
+
+
+app.use('/admin', adminRouter);
 
 app.get("/", (req, res) => {
     res.json({
