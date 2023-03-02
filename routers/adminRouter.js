@@ -25,3 +25,7 @@ adminRouter.route('/').get((req, res) => {
         }
     }());
 })
+
+
+module.exports = adminRouter;
+
