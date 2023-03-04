@@ -1,34 +1,38 @@
 const express = require('express');
 const app = express();
 const { MongoClient } = require('mongodb');
-const adminRouter = express.Router();
 
-const uri = process.env.DATABASE;
-
-const dbName = 'gtmc';
-
-adminRouter.route('/').get((req, res) => {
-    (async function mongo() {
-        let client;
-
-        try {
-            console.log(uri);
-
-            client = await MongoClient.connect(uri);
-            console.log('Connected');
-            const db = client.db(dbName);
-            const response = await db.collection('sessions').insertMany({ "id": "1" });
-            res.json(response);
+console.log("admin router");
 
 
-        } catch (error) {
-            console.log('ERROR');
-            console.log(error);
-        }
-    }());
+// const adminRouter = express.Router();
+
+// const uri = process.env.DATABASE;
+
+// const dbName = 'gtmc';
+
+// adminRouter.route('/').get((req, res) => {
+//     (async function mongo() {
+//         let client;
+
+//         try {
+//             console.log(uri);
+
+//             client = await MongoClient.connect(uri);
+//             console.log('Connected');
+//             const db = client.db(dbName);
+//             const response = await db.collection('sessions').insertMany({ "id": "1" });
+//             res.json(response);
 
 
-})
+//         } catch (error) {
+//             console.log('ERROR');
+//             console.log(error);
+//         }
+//     }());
+
+
+// })
 
 // adminRouter.route('/').get((req, res) => {
 
