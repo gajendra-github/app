@@ -10,7 +10,8 @@ const dbName = 'gtmc-app';
 adminRouter.route('/').get((req, res) => {
     (async function mongo() {
         try {
-            console.log('This is admin router');
+            console.log(uri);
+
             client = await MongoClient.connect(uri);
             console.log('Connected to mongo DB');
 
