@@ -13,7 +13,17 @@ const dbName = 'globomantics2';
 
 adminRouter.route('/').get((req, res) => {
 
-    console.log('This is admin router');
+
+
+    (async function mongo() {
+        try {
+            console.log('This is admin router');
+        } catch (error) {
+            console.log(error);
+        }
+    }());
+
+
 })
 
 // adminRouter.route('/').get((req, res) => {
