@@ -11,6 +11,7 @@ const dbName = 'globomantics2';
 
 
 
+
 adminRouter.route('/').get((req, res) => {
 
 
@@ -52,7 +53,23 @@ module.exports = adminRouter;
 /*
 dbUser
 
+CncaA8bZvpk2Lq2l
+
+mongodb+srv://dbUser:CncaA8bZvpk2Lq2l@cluster0.n6wmrai.mongodb.net?retryWrites=true&w=majority
+
+
+
+
+
+
+
 
 
 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
+
+
+
+mongodb+srv://dbUser:m8bYPccxSv2rfP71@mongodb.net?retryWrites=true&w=majority
+
+
 */
