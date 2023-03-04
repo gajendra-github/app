@@ -5,18 +5,24 @@ const adminRouter = express.Router();
 
 const uri = process.env.MONGO_URI;
 
-const dbName = 'gtmc-app';
+const dbName = 'gtmc';
 
 adminRouter.route('/').get((req, res) => {
     (async function mongo() {
+        let client;
+
         try {
             console.log(uri);
 
             client = await MongoClient.connect(uri);
-            console.log('Connected to mongo DB');
+            console.log('Connected');
+            const db = client.db(dbName);
+            const response = await db.collection('sessions').insertMany({ "id": "1" });
+            res.json(response);
 
 
         } catch (error) {
+            console.log('ERROR');
             console.log(error);
         }
     }());
