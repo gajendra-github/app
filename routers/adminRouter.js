@@ -3,7 +3,7 @@ const app = express();
 const { MongoClient } = require('mongodb');
 const adminRouter = express.Router();
 
-const uri = process.env.MONGO_URI;
+const uri = process.env.DATABASE;
 
 const dbName = 'gtmc';
 
