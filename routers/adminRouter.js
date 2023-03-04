@@ -24,8 +24,11 @@ adminRouter.route('/').get((req, res) => {
             console.log(error.stack);
 
         }
-
+        client.close();
+        console.log("disconnected from database");
     }
+
+    connectToDatabase();
 
     //res.send('Lado...what the fuck');
 })
