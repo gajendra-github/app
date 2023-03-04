@@ -18,6 +18,9 @@ adminRouter.route('/').get((req, res) => {
     (async function mongo() {
         try {
             console.log('This is admin router');
+            client = await MongoClient.connect(uri);
+            console.log('Connected to mongo DB');
+
         } catch (error) {
             console.log(error);
         }
