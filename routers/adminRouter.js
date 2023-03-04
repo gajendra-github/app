@@ -9,24 +9,25 @@ const adminRouter = express.Router();
 
 adminRouter.route('/').get((req, res) => {
 
-    res.send('Lado...what the fuck');
+    async function connectToDatabase() {
+        const uri = process.env.MONGODB_URI;
+        const client = new MongoClient(uri);
+        try {
+            console.log("sending request for database connection...");
+            await client.connect();
+            console.log("connected to database");
+
+        } catch (error) {
+            console.log(error.stack);
+
+        }
+
+    }
+
+    //res.send('Lado...what the fuck');
 })
 
 
-
-// async function connectToDatabase() {
-//     const uri = process.env.MONGODB_URI;
-//     const client = new MongoClient(uri);
-//     try {
-//         await client.connect();
-//         console.log("connected to database");
-
-//     } catch (error) {
-//         console.log(error.stack);
-
-//     }
-
-// }
 
 
 // const uri = process.env.DATABASE;
