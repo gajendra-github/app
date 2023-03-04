@@ -11,7 +11,7 @@ const dbName = 'globomantics2';
 
 
 
-adminRouter.router('/').get((req, res) => {
+adminRouter.route('/').get((req, res) => {
 
     console.log('This is admin router');
 })
