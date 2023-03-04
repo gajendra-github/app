@@ -11,7 +11,10 @@ adminRouter.route('/').get((req, res) => {
 
     async function connectToDatabase() {
         const uri = process.env.MONGODB_URI;
+        console.log(uri);
         const client = new MongoClient(uri);
+        console.log(client);
+
         try {
             console.log("sending request for database connection...");
             await client.connect();
