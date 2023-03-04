@@ -2,10 +2,10 @@ const express = require('express');
 const app = express();
 const { MongoClient } = require('mongodb');
 
-console.log("admin router");
+console.log("This is admin router");
 
 
-// const adminRouter = express.Router();
+const adminRouter = express.Router();
 
 // const uri = process.env.DATABASE;
 
