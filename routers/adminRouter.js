@@ -9,8 +9,12 @@ const uri = process.env.MONGO_URI;
 
 const dbName = 'globomantics2';
 
-console.log('This is admin router');
 
+
+adminRouter.router('/').get((req, res) => {
+
+    console.log('This is admin router');
+})
 
 // adminRouter.route('/').get((req, res) => {
 
@@ -37,5 +41,5 @@ dbUser
 
 
 
-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
+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
 */
