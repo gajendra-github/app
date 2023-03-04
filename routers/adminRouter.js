@@ -7,6 +7,21 @@ console.log("This is admin router");
 
 const adminRouter = express.Router();
 
+async function connectToDatabase() {
+    const uri = process.env.MONGODB_URI;
+    const client = new MongoClient(uri);
+    try {
+        await client.connect();
+        console.log("connected to database");
+
+    } catch (error) {
+        console.log(error.stack);
+
+    }
+
+}
+
+
 // const uri = process.env.DATABASE;
 
 // const dbName = 'gtmc';
